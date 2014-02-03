@@ -478,11 +478,14 @@ _vector_table:
     .word _isr_tsi
     .word _isr_mcg
     .word _isr_low_power_timer
+    .word 0x00000000
     .word _isr_gpio_a
     .word _isr_gpio_b
     .word _isr_gpio_c
     .word _isr_gpio_d
     .word _isr_gpio_e
+    .word 0x00000000
+    .word 0x00000000
     .word _isr_software
 
     /*
