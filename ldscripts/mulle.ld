@@ -26,11 +26,12 @@ SECTIONS
 
         . = _vector_rom + SIZEOF(.vector_table);
     } >flash
-    ASSERT (. == 0x400, "Interrupt vector of invalid size.")
+    ASSERT (. == 0x1bc, "Interrupt vector of invalid size.")
 
     /* Flash security 0x400-0x40f. */
     .security :
     {
+        . = 0x400;
         /* Backdoor key. */
         LONG (0x01234567) LONG (0x89abcdef)
 
