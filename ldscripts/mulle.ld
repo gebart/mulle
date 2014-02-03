@@ -29,9 +29,8 @@ SECTIONS
     ASSERT (. == 0x1bc, "Interrupt vector of invalid size.")
 
     /* Flash security 0x400-0x40f. */
-    .security :
+    .security 0x400:
     {
-        . = 0x400;
         /* Backdoor key. */
         LONG (0x01234567) LONG (0x89abcdef)
 
